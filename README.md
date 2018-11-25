@@ -6,7 +6,10 @@ This is repository will create a calendar in ICal format which includes all futu
 
 1. fork this repository
 2. run `git clone https://github.com/<Your Github User here>/NTNU-Online-Event-Notifier/`
-3. create a new branch `git checkout -b <Your branch name>`. The branch name can be something like adding <new feature> or fixing <new bug>
-4. write some code
-5. run `git add <yourpath/NTNU-Online-Event-Notifier/<your changed files>` and then `git commit -m <useful message about what you have done >`
-6. run `git push origin <branch name>` and create a pull request here. Remember to describe what you have done etc.
+3. run `yarn install` to install dependencies
+4. create a new branch `git checkout -b <Your branch name>`. The branch name can be something like adding <new feature> or fixing <new bug>
+5. write some code
+6. run `git add <yourpath/NTNU-Online-Event-Notifier/<your changed files>` and then `git commit -m <useful message about what you have done >`
+7. run `git push origin <branch name>` and create a pull request here. Remember to describe what you have done etc.
+
+You can run `yarn start` and go to localhost:3000 to check if the output is a ICal format
