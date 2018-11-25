@@ -11,7 +11,7 @@ function generateCalendar(eventList) {
         
         cal.createEvent({
             ...event,
-            description: event.url + "\n" +event.description
+            description: event.url + "\n\n" +event.description
         });
     }
 
