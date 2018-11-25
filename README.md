@@ -12,4 +12,6 @@ This is repository will create a calendar in ICal format which includes all futu
 6. run `git add <yourpath/NTNU-Online-Event-Notifier/<your changed files>` and then `git commit -m <useful message about what you have done >`
 7. run `git push origin <branch name>` and create a pull request here. Remember to describe what you have done etc.
 
-You can run `yarn start` and go to localhost:3000 to check if the output is a ICal format
+You can run `yarn start` and go to localhost:<portnumber> to check if the output is a ICal format
+
+To add this calendar you can either add from URL for Google Calendar or paste it and follow the instructions for ICalendar
