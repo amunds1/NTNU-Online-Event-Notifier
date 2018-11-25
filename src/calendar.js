@@ -3,7 +3,7 @@ const ical = require('ical-generator');
 function generateCalendar(eventList) {
     const cal = ical({
         domain: 'github.com',
-        name: 'Online Event Feed'
+        name: 'Online Event-registration Feed'
     });
 
     for (const event of eventList) {
@@ -11,7 +11,7 @@ function generateCalendar(eventList) {
         
         cal.createEvent({
             ...event,
-            description: event.summary
+            description: event.url + "\n" +event.description
         });
     }
 

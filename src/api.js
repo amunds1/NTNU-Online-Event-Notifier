@@ -24,8 +24,7 @@ async function generateEventList() {
 
     const body = await getRawEventList(url);
     url = body.next;
-
-    let filteredResults = body.results.filter(result => (todaysDate <= result.attendance_event.registration_start))
+    let filteredResults = body.results.filter(result => (todaysDate <= result.attendance_event.registration_start));
     
      eventList.push(...filteredResults.map(result => ({
       title: result.title,
