@@ -14,8 +14,9 @@ function getRawEventList(url) {
 }
 
 async function generateEventList() {
-  const date = moment().format('YYYY-MM-DD');
-  const baseUrl = `https://online.ntnu.no/api/v1/events/?attendance_event__isnull=False `;
+  const todaysDate = moment().toISOString();
+  const date_OneWeekAgo = moment().subtract(8,'days').format('YYYY-MM-DD');        //Filters all events starting from 1 week ago + 1 day just to be sure 
+  const baseUrl = `https://online.ntnu.no/api/v1/events/?attendance_event__isnull=False&event_start__gte=${date_OneWeekAgo} `;
   let url = baseUrl;
   const eventList = [];
 
@@ -24,7 +25,7 @@ async function generateEventList() {
     const body = await getRawEventList(url);
     url = body.next;
 
-    let filteredResults = body.results.filter(result => (date <= result.attendance_event.registration_start))
+    let filteredResults = body.results.filter(result => (todaysDate <= result.attendance_event.registration_start))
     
      eventList.push(...filteredResults.map(result => ({
       title: result.title,
