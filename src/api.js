@@ -31,7 +31,7 @@ async function generateEventList() {
       title: result.title,
       start: result.attendance_event.registration_start,
       end: result.attendance_event.registration_start,
-      summary: result.ingress_short,
+      summary: result.title,
       description: result.ingress_short,
       location: result.location,
       url: 'https://online.ntnu.no' + result.absolute_url,
